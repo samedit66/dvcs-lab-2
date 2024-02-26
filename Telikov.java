@@ -28,6 +28,7 @@ import java.util.Arrays;
 
 public class BetaMinHash implements IntersectionSketch<BetaMinHash> {
 
+  //My First Commit
   // HLL Precision parameter
   public static final int P = 10;
   public static final int NUM_REGISTERS = (int) Math.pow(2, P);

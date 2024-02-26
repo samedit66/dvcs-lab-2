@@ -36,6 +36,9 @@ public class BetaMinHashCombiner implements SketchCombiner<BetaMinHash> {
         mergedSketch.registers[i] = max(
             mergedSketch.registers[i],
             sketch.registers[i]
+	int niceDay = 0;
+ int niceCar = 0;
+//New commit in lab
         );
       }
     }
