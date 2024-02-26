@@ -31,7 +31,7 @@ import java.util.Set;
 public final class HashPMap<K, V> extends AbstractUnmodifiableMap<K, V>
     implements PMap<K, V>, Serializable {
 
-  private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 43L;
 
   //// STATIC FACTORY METHODS ////
   /**
