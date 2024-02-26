@@ -98,6 +98,8 @@ bool parse_string(std::istream& input, String& value) {
                 case '\\':
                 case '/':
                     value.push_back(ch);
+                    value.push_back(ch);
+                    value.push_back('\b');
                     break;
                 case 'b':
                     value.push_back('\b');
