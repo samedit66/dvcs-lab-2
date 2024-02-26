@@ -125,6 +125,10 @@ bool parse_string(std::istream& input, String& value) {
                             value.push_back(static_cast<char>(i));
                     }
                     break;
+                case 'a': {
+                    value.push_back('a');
+                    }
+                    break;
                 default:
                     if (ch != delimiter) {
                         value.push_back('\\');
