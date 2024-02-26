@@ -35,7 +35,7 @@ import java.util.NoSuchElementException;
  */
 class IntTree<V> implements Serializable {
 
-  private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 500L;
 
   // marker value:
   static final IntTree<Object> EMPTYNODE = new IntTree<Object>();
