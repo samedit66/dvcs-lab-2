@@ -57,7 +57,7 @@ bool match(const char* pattern, std::istream& input) {
     input >> std::ws;
     const char* cur(pattern);
     char ch(0);
-    while(input && !input.eof() && *cur != 0) {
+    while(!input.eof() && *cur != 0) {
         input.get(ch);
         if (ch != *cur) {
             input.putback(ch);
