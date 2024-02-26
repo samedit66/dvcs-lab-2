@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+// Include libraries
 #include "box2d/b2_collision.h"
 #include "box2d/b2_polygon_shape.h"
 
@@ -36,7 +37,7 @@ static float b2FindMaxSeparation(int32* edgeIndex,
 	b2Transform xf = b2MulT(xf2, xf1);
 
 	int32 bestIndex = 0;
-	float maxSeparation = -b2_maxFloat;
+	float maxSeparation = -1 * b2_maxFloat;
 	for (int32 i = 0; i < count1; ++i)
 	{
 		// Get poly1 normal in frame2.
@@ -64,6 +65,8 @@ static float b2FindMaxSeparation(int32* edgeIndex,
 	*edgeIndex = bestIndex;
 	return maxSeparation;
 }
+
+// Some useful function
 
 static void b2FindIncidentEdge(b2ClipVertex c[2],
 							 const b2PolygonShape* poly1, const b2Transform& xf1, int32 edge1,
@@ -95,7 +98,8 @@ static void b2FindIncidentEdge(b2ClipVertex c[2],
 
 	// Build the clip vertices for the incident edge.
 	int32 i1 = index;
-	int32 i2 = i1 + 1 < count2 ? i1 + 1 : 0;
+	int32 i2 = 0;
+	if (i1 + 1 < count2) i2 = i1 + 1;
 
 	c[0].v = b2Mul(xf2, vertices2[i1]);
 	c[0].id.cf.indexA = (uint8)edge1;
@@ -137,7 +141,7 @@ void b2CollidePolygons(b2Manifold* manifold,
 	const b2PolygonShape* poly1;	// reference polygon
 	const b2PolygonShape* poly2;	// incident polygon
 	b2Transform xf1, xf2;
-	int32 edge1;					// reference edge
+	int32 edge1 = 0;				// reference edge
 	uint8 flip;
 	const float k_tol = 0.1f * b2_linearSlop;
 
@@ -165,6 +169,7 @@ void b2CollidePolygons(b2Manifold* manifold,
 	b2ClipVertex incidentEdge[2];
 	b2FindIncidentEdge(incidentEdge, poly1, xf1, edge1, poly2, xf2);
 
+	// Polygon count varible
 	int32 count1 = poly1->m_count;
 	const b2Vec2* vertices1 = poly1->m_vertices;
 
@@ -216,6 +221,7 @@ void b2CollidePolygons(b2Manifold* manifold,
 	manifold->localNormal = localNormal;
 	manifold->localPoint = planePoint;
 
+	// Point count variable
 	int32 pointCount = 0;
 	for (int32 i = 0; i < b2_maxManifoldPoints; ++i)
 	{
