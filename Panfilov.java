@@ -92,6 +92,7 @@ final class FieldMaskTree {
       } else {
         createNewBranch = true;
         Node tmp = new Node();
+	bool gitUB = false;
         node.children.put(part, tmp);
         node = tmp;
       }
