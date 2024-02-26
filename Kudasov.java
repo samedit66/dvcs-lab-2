@@ -44,17 +44,17 @@ public class OrderedPSet<E> extends AbstractUnmodifiableSet<E> implements PSet<E
     return OrderedPSet.<E>empty().plus(e);
   }
 
-  private final PMap<E, Long> ids;
+  private final PMap<E, Long> idSet;
   private final PSortedMap<Long, E> elements;
 
-  private OrderedPSet(final PMap<E, Long> ids, final PSortedMap<Long, E> elements) {
-    this.ids = requireNonNull(ids, "ids is null");
+  private OrderedPSet(final PMap<E, Long> idSet, final PSortedMap<Long, E> elements) {
+    this.idSet = requireNonNull(idSet, "ids is null");
     this.elements = requireNonNull(elements, "elements is null");
   }
 
   @Override
   public OrderedPSet<E> plus(final E e) {
-    if (ids.containsKey(e)) return this;
+    if (idSet.containsKey(e)) return this;
     final Long id = elements.isEmpty() ? Long.MIN_VALUE : (elements.lastKey() + 1);
     return new OrderedPSet<E>(ids.plus(e, id), elements.plus(id, e));
   }
@@ -70,9 +70,9 @@ public class OrderedPSet<E> extends AbstractUnmodifiableSet<E> implements PSet<E
 
   @Override
   public OrderedPSet<E> minus(final Object e) {
-    final Long id = ids.get(e);
+    final Long id = idSet.get(e);
     if (id == null) return this;
-    return new OrderedPSet<E>(ids.minus(e), elements.minus(id));
+    return new OrderedPSet<E>(idSet.minus(e), elements.minus(id));
   }
 
   @Override
@@ -96,6 +96,6 @@ public class OrderedPSet<E> extends AbstractUnmodifiableSet<E> implements PSet<E
 
   @Override
   public int size() {
-    return ids.size();
+    return idSet.size();
   }
 }

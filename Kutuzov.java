@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  *
- * Copyright (c) 2017-2023 Ta4j Organization & respective
+ * Copyright (c) 2017-2024 Ta4j Organization & respective
  * authors (see AUTHORS)
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -236,6 +236,7 @@ public class BaseBarSeries implements BarSeries {
 
     }
 
+    // Getter for num
     @Override
     public Num num() {
         return num;
@@ -277,11 +278,13 @@ public class BaseBarSeries implements BarSeries {
         return f == bar.getClosePrice().getClass() || bar.getClosePrice().equals(NaN);
     }
 
+    //Getter for name
     @Override
     public String getName() {
         return name;
     }
 
+    //Getter for bar
     @Override
     public Bar getBar(int i) {
         int innerIndex = i - removedBarsCount;
@@ -380,7 +383,6 @@ public class BaseBarSeries implements BarSeries {
 
         bars.add(bar);
         if (seriesBeginIndex == -1) {
-            // The begin index is set to 0 if not already initialized:
             seriesBeginIndex = 0;
         }
         seriesEndIndex++;
