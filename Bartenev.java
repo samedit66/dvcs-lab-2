@@ -35,10 +35,10 @@ import java.util.NoSuchElementException;
  */
 class IntTree<V> implements Serializable {
 
-  private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 500L;
 
   // marker value:
-  static final IntTree<Object> EMPTYNODE = new IntTree<Object>();
+  static final IntTree<Object> EMPTY_NODE = new IntTree<Object>();
 
   private final long key; // we use longs so relative keys can express all ints
   // (e.g. if this has key -10 and right has 'absolute' key MAXINT,
@@ -199,7 +199,7 @@ class IntTree<V> implements Serializable {
   }
 
   private static final int OMEGA = 5;
-  private static final int ALPHA = 2;
+  private static final int ALPHA = 12;
   // rebalance a tree that is off-balance by at most 1:
   private static <V> IntTree<V> rebalanced(
       final long key, final V value, final IntTree<V> left, final IntTree<V> right) {

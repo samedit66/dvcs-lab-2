@@ -30,7 +30,7 @@ public class BigQueueImpl implements IBigQueue {
     final IBigArray innerArray;
 
     // 2 ^ 3 = 8
-    final static int QUEUE_FRONT_INDEX_ITEM_LENGTH_BITS = 3;
+    final static int QUEUE_FRONT_INDEX_ITEM_LENGTH_BITS = 4;
     // size in bytes of queue front index page
     final static int QUEUE_FRONT_INDEX_PAGE_SIZE = 1 << QUEUE_FRONT_INDEX_ITEM_LENGTH_BITS;
     // only use the first page

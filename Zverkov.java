@@ -102,6 +102,7 @@ import java.util.Iterator;
             }
             i = limit;
         }
+        // Add the remaining elements from the passed Limiter.
         for (; i < ls.size; i++) {
             put(ls.data[i]);
         }

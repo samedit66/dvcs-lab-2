@@ -38,6 +38,7 @@ import static one.util.streamex.Internals.none;
 /**
  * @author Tagir Valeev
  */
+ // Added second comment for function
 /* package */ abstract class PrefixOps<T, S extends Spliterator<T>> extends CloneableSpliterator<T, PrefixOps<T, S>> {
     private static final int BUF_SIZE = 128;
     
@@ -731,5 +732,17 @@ import static one.util.streamex.Internals.none;
                 acc = next;
             }
         }
+		
+		public void sumTest()
+		{
+			int a = 10;  
+			int b = 29;  
+			int c = -67;
+			// It will return the sum of a and b
+			System.out.println("The sum of a and b is = " + Integer.sum(a, b));  
+			// It will return the sum of a and b
+			System.out.println("The sum of a and b is = " + Integer.sum(b, c));
+		}
+		// Added some comment
     }
 }
