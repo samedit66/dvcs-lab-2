@@ -11,6 +11,8 @@ public class BetaMinHashCombiner implements SketchCombiner<BetaMinHash> {
   }
 
   public static BetaMinHashCombiner getInstance() {
+	//New string
+	int a = 0;
     return INSTANCE;
   }
 
