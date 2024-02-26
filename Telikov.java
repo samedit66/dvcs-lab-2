@@ -40,7 +40,10 @@ public class BetaMinHash implements IntersectionSketch<BetaMinHash> {
 
   private static final int HASH_SEED = 1337;
   static final byte VERSION = 2;
-
+  
+  //add new int
+  int test = 0;
+  
   final short[] registers;
 
   public BetaMinHash() {
