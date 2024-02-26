@@ -115,7 +115,7 @@ public final class HashPMap<K, V> extends AbstractUnmodifiableMap<K, V>
     return result;
   }
 
-  public HashPMap<K, V> minusAll(final Collection<?> keys) {
+  private HashPMap<K, V> minusAll(final Collection<?> keys) {
     HashPMap<K, V> result = this;
     for (Object key : keys) result = result.minus(key);
     return result;
