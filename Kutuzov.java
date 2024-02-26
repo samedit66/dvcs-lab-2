@@ -456,6 +456,11 @@ public class BaseBarSeries implements BarSeries {
             removedBarsCount += nbBarsToRemove;
             seriesBeginIndex = Math.max(seriesBeginIndex, removedBarsCount);
         }
+      foo();
     }
-
+    
+    //foo function
+    private void foo(){
+      //do nothing
+    }
 }
