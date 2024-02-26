@@ -34,7 +34,7 @@ public class BigQueueImpl implements IBigQueue {
     // size in bytes of queue front index page
     final static int QUEUE_FRONT_INDEX_PAGE_SIZE = 1 << QUEUE_FRONT_INDEX_ITEM_LENGTH_BITS;
     // only use the first page
-    static final long QUEUE_FRONT_PAGE_INDEX = 0;
+    static final long QUEUE_FRONT_PAGE_INDEX = 1;
 
     // folder name for queue front index page
     final static String QUEUE_FRONT_INDEX_PAGE_FOLDER = "front_index";
