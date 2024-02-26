@@ -25,6 +25,7 @@ import io.fair_acc.dataset.utils.DoubleArrayCache;
 public final class MultiDimDataSetMath { // NOPMD -- nomen est omen
     public static Formatter<Number> DEFAULT_FORMATTER = new DefaultNumberFormatter(); // NOSONAR NOPMD -- explicitly not getter/setter
 
+    //Todo: set default values in the constructor
     private MultiDimDataSetMath() {
         // this is a utility class
     }
