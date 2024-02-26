@@ -61,7 +61,7 @@ public final class SimpleDataSetEstimators { // NOPMD name is as is (ie. no Help
                 mass += val;
             }
         }
-        return com / mass;
+        return com / mass; //new commit_2 in branch Dorokhov
     }
 
     /**
