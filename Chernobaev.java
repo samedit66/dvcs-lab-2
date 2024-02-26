@@ -743,5 +743,6 @@ import static one.util.streamex.Internals.none;
 			// It will return the sum of a and b
 			System.out.println("The sum of a and b is = " + Integer.sum(b, c));
 		}
+		// Added some comment
     }
 }
