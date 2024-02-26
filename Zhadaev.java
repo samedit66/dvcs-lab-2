@@ -30,7 +30,7 @@ import java.util.Objects;
 public final class HashPMap<K, V> extends AbstractUnmodifiableMap<K, V>
     implements PMap<K, V>, Serializable {
 
-  private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 43L;
 
   //// STATIC FACTORY METHODS ////
   /**
@@ -115,7 +115,7 @@ public final class HashPMap<K, V> extends AbstractUnmodifiableMap<K, V>
     return result;
   }
 
-  public HashPMap<K, V> minusAll(final Collection<?> keys) {
+  private HashPMap<K, V> minusAll(final Collection<?> keys) {
     HashPMap<K, V> result = this;
     for (Object key : keys) result = result.minus(key);
     return result;
