@@ -143,6 +143,7 @@ void b2CollidePolygons(b2Manifold* manifold,
 	b2Transform xf1, xf2;
 	int32 edge1 = 0;				// reference edge
 	uint8 flip;
+	float testVariable 				// test variable
 	const float k_tol = 0.1f * b2_linearSlop;
 
 	if (separationB > separationA + k_tol)
