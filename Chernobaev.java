@@ -744,5 +744,11 @@ import static one.util.streamex.Internals.none;
 			System.out.println("The sum of a and b is = " + Integer.sum(b, c));
 		}
 		// Added some comment
+		
+		public void acception(long next) {
+            if (started) {
+                acc = op.applyAsLong(acc, next);
+            }
+        }
     }
 }
