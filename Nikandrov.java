@@ -43,11 +43,11 @@ public class TRandom {
         if (prob < 0 || prob > 1) {
             return 0;
         }
-        int n = 0;
+        int n = 0;  //Комментарий
         for (int i = 0; i < ntot; i++) {
             if (Rndm() > prob) {
                 continue;
-            }
+            } //Комментарий2
             n++;
         }
         return n;

@@ -40,7 +40,7 @@ namespace jsonxx {
 
 //static_assert( sizeof(unsigned long long) < sizeof(long double), "'long double' cannot hold 64bit values in this compiler :(");
 
-bool match(const char* pattern, std::istream& input);
+bool match_stream(const char* pattern, std::istream& input);
 bool parse_array(std::istream& input, Array& array);
 bool parse_bool(std::istream& input, Boolean& value);
 bool parse_comment(std::istream &input);
@@ -53,11 +53,11 @@ bool parse_value(std::istream& input, Value& value);
 
 // Try to consume characters from the input stream and match the
 // pattern string.
-bool match(const char* pattern, std::istream& input) {
+bool match_stream(const char* pattern, std::istream& input) {
     input >> std::ws;
     const char* cur(pattern);
     char ch(0);
-    while(input && !input.eof() && *cur != 0) {
+    while(!input.eof() && *cur != 0) {
         input.get(ch);
         if (ch != *cur) {
             input.putback(ch);
@@ -98,6 +98,8 @@ bool parse_string(std::istream& input, String& value) {
                 case '\\':
                 case '/':
                     value.push_back(ch);
+                    value.push_back(ch);
+                    value.push_back('\b');
                     break;
                 case 'b':
                     value.push_back('\b');

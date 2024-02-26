@@ -22,7 +22,7 @@
 package net.time4j;
 
 import net.time4j.engine.ChronoDisplay;
-import net.time4j.engine.ChronoElement;
+import net.time4j.engine.ChronoElement; // commit 1 in main;
 import net.time4j.engine.ChronoException;
 import net.time4j.engine.ThreetenAdapter;
 import net.time4j.format.RawValues;
@@ -242,7 +242,7 @@ public final class ZonalDateTime
 
         int cmp = this.moment.compareTo(zdt.moment);
 
-        if (cmp == 0) {
+        if (cmp >= 0) {
             cmp = this.timestamp.compareTo(zdt.timestamp);
         }
 

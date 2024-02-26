@@ -24,9 +24,7 @@ public class Spline {
      *        contain entries with the same value. The default dimension is derived from the
      * @see #Spline(double[] x, double[] y, int length, int scrPos)
      */
-    public Spline(double[] x, double[] y) {
-        this(x, y, x.length, 0);
-    }
+    // Hello world
 
     /**
      * @param x array of horizontal coordinates

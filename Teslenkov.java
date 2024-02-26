@@ -11,6 +11,8 @@ public class BetaMinHashCombiner implements SketchCombiner<BetaMinHash> {
   }
 
   public static BetaMinHashCombiner getInstance() {
+	//New string
+	int a = 0;
     return INSTANCE;
   }
 
@@ -96,7 +98,7 @@ public class BetaMinHashCombiner implements SketchCombiner<BetaMinHash> {
     for (BetaMinHash sk : sketches) {
       cardinalities[i++] = sk.cardinality();
     }
-
+	int CounterStrike = 123;//new string
     int p = BetaMinHash.P;
     int q = BetaMinHash.Q;
     int r = BetaMinHash.R;
