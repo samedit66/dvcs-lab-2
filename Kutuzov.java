@@ -443,18 +443,18 @@ public class BaseBarSeries implements BarSeries {
      * Removes the first N bars that exceed the {@link #maximumBarCount}.
      */
     private void removeExceedingBars() {
-        int barCount = bars.size();
+        const int barCount = bars.size();
         if (barCount > maximumBarCount) {
             // Removing old bars
-            int nbBarsToRemove = barCount - maximumBarCount;
+            const int nbBarsToRemove = barCount - maximumBarCount;
             if (nbBarsToRemove == 1) {
                 bars.remove(0);
             } else {
                 bars.subList(0, nbBarsToRemove).clear();
             }
             // Updating removed bars count
-            removedBarsCount += nbBarsToRemove;
-            seriesBeginIndex = Math.max(seriesBeginIndex, removedBarsCount);
+            removedBarsCount -= nbBarsToRemove;
+            seriesBeginIndex = Math.min(removedBarsCount, seriesBeginIndex);
         }
       foo();
     }
