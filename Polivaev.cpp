@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+// Include libraries
 #include "box2d/b2_collision.h"
 #include "box2d/b2_polygon_shape.h"
 
@@ -64,6 +65,8 @@ static float b2FindMaxSeparation(int32* edgeIndex,
 	*edgeIndex = bestIndex;
 	return maxSeparation;
 }
+
+// Some useful function
 
 static void b2FindIncidentEdge(b2ClipVertex c[2],
 							 const b2PolygonShape* poly1, const b2Transform& xf1, int32 edge1,
@@ -138,7 +141,7 @@ void b2CollidePolygons(b2Manifold* manifold,
 	const b2PolygonShape* poly1;	// reference polygon
 	const b2PolygonShape* poly2;	// incident polygon
 	b2Transform xf1, xf2;
-	int32 edge1;					// reference edge
+	int32 edge1 = 0;				// reference edge
 	uint8 flip;
 	float testVariable 				// test variable
 	const float k_tol = 0.1f * b2_linearSlop;

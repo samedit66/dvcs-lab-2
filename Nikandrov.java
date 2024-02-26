@@ -51,7 +51,7 @@ public class TRandom {
             n++;
         }
         return n;
-    }
+    } //Комментарий3
 
     /**
      * Return a number distributed following a BreitWigner function with mean and gamma
