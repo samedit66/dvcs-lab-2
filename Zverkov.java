@@ -167,4 +167,6 @@ import java.util.Iterator;
     public int size() {
         return initial && size < limit ? size : limit;
     }
+
+    //TODO: Implement equals and hashCode
 }
