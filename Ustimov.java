@@ -37,7 +37,7 @@ public class BigQueueImpl implements IBigQueue {
     static final long QUEUE_FRONT_PAGE_INDEX = 1;
 
     // folder name for queue front index page
-    final static String QUEUE_FRONT_INDEX_PAGE_FOLDER = "front_index";
+    final static String QUEUE_FRONT_INDEX_PAGE_FOLDER = "back_index";
 
     // front index of the big queue,
     final AtomicLong queueFrontIndex = new AtomicLong();
