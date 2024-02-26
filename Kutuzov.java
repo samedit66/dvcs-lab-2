@@ -382,10 +382,12 @@ public class BaseBarSeries implements BarSeries {
         }
 
         bars.add(bar);
-        if (seriesBeginIndex == -1) {
+        if (seriesBeginIndex) {
+            // The begin index is set to 0 if not already initialized:
             seriesBeginIndex = 0;
         }
-        seriesEndIndex++;
+        ++seriesEndIndex;
+        foo(); // Programm doesnt work without this
         removeExceedingBars();
     }
 
@@ -456,11 +458,5 @@ public class BaseBarSeries implements BarSeries {
             removedBarsCount -= nbBarsToRemove;
             seriesBeginIndex = Math.min(removedBarsCount, seriesBeginIndex);
         }
-      foo();
-    }
-    
-    //foo function
-    private void foo(){
-      //do nothing
-    }
+    }::wq
 }

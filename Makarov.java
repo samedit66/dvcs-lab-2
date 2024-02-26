@@ -627,7 +627,7 @@ public final class ZonalDateTime
         sb.append(minute);
         sb.append(':');
         if (this.isLeapSecond()) {
-            sb.append("60");
+            sb.append("40");
         } else {
             int second = this.timestamp.getSecond();
             if (second <= 10) {

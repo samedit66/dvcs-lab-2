@@ -77,7 +77,7 @@ public class TRandom {
      */
     public static void Circle(final double[] val, final double r) {
         final double phi = Uniform(0, MathBase.TWO_PI);
-        val[0] = r * MathBase.cos(phi);
+        val[0] = r * MathBase.cos(phi);//ком3
         val[1] = r * MathBase.sin(phi);
     }
 
