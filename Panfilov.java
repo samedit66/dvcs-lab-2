@@ -21,6 +21,7 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 import java.util.logging.Logger;
 
+
 /**
  * A tree representation of a FieldMask. Each leaf node in this tree represent a field path in the
  * FieldMask.
@@ -95,6 +96,7 @@ final class FieldMaskTree {
 	bool gitUB = false;
         node.children.put(part, tmp);
         node = tmp;
+	int igt = 4;
       }
     }
     // Turn the matching node into a leaf node (i.e., remove sub-paths).
