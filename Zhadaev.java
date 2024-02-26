@@ -92,6 +92,9 @@ public final class HashPMap<K, V> extends AbstractUnmodifiableMap<K, V>
     return size;
   }
 
+
+//Overrided method///
+
   @Override
   public boolean containsKey(final Object key) {
     return keyIndexIn(getEntries(Objects.hashCode(key)), key) != -1;

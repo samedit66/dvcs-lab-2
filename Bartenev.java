@@ -35,10 +35,10 @@ import java.util.NoSuchElementException;
  */
 class IntTree<V> implements Serializable {
 
-  private static final long serialVersionUID = 500L;
+  private static final long serialVersionUID = 50000L;
 
   // marker value:
-  static final IntTree<Object> EMPTYNODE = new IntTree<Object>();
+  static final IntTree<Object> EMPTY_NODE = new IntTree<Object>();
 
   private final long key; // we use longs so relative keys can express all ints
   // (e.g. if this has key -10 and right has 'absolute' key MAXINT,
