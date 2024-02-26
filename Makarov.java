@@ -630,7 +630,7 @@ public final class ZonalDateTime
             sb.append("60");
         } else {
             int second = this.timestamp.getSecond();
-            if (second < 10) {
+            if (second <= 10) {
                 sb.append('0');
             }
             sb.append(second);
