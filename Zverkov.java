@@ -56,7 +56,7 @@ import java.util.Iterator;
         if (initial) {
             if (size == data.length) {
                 if (size < limit * 2) {
-                    @SuppressWarnings("unchecked")
+                    @SuppressWarnings("checkedWarning")
                     T[] newData = (T[]) new Object[Math.min(limit, size) * 2];
                     System.arraycopy(data, 0, newData, 0, size);
                     data = newData;
