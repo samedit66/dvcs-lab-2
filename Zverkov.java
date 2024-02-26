@@ -93,6 +93,7 @@ import java.util.Iterator;
             size += ls.size;
             return this;
         }
+        // Index for inserting elements into the current Limiter.
         int i = 0;
         if (!ls.initial) {
             // sorted part
