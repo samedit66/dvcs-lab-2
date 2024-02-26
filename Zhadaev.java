@@ -12,7 +12,6 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Set;
 
 /**
  * A persistent map from keys to values. Keys and values can be null.
@@ -31,7 +30,7 @@ import java.util.Set;
 public final class HashPMap<K, V> extends AbstractUnmodifiableMap<K, V>
     implements PMap<K, V>, Serializable {
 
-  private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 43L;
 
   //// STATIC FACTORY METHODS ////
   /**
@@ -116,7 +115,7 @@ public final class HashPMap<K, V> extends AbstractUnmodifiableMap<K, V>
     return result;
   }
 
-  public HashPMap<K, V> minusAll(final Collection<?> keys) {
+  private HashPMap<K, V> minusAll(final Collection<?> keys) {
     HashPMap<K, V> result = this;
     for (Object key : keys) result = result.minus(key);
     return result;
