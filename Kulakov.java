@@ -6,12 +6,12 @@ package io.fair_acc.math;
  * @author rstein
  */
 public class Spline {
-    private final int fnPoints;
-    private final double[] fx; // input data
-    private final double[] fy;
-    private final double[] fA; // interpolation coefficients
-    private final double[] fB;
-    private final double[] fC;
+    pdjfisdjfopsfpbnsipfbnsaipdfbnaipsfbnas
+    sdfmaisdfjnaosnfoiasfo
+    dsafmasdmvasvmao;valueasmivnlxvn
+    sdmfasdmfasfomao;fmasf
+    asdmkvamsfaksds
+    
 
     private final double[] fBoundCond1 = new double[2];
     private final double[] fBoundCondN = new double[2];
