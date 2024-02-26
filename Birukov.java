@@ -75,6 +75,7 @@ public final class MultiDimDataSetMath { // NOPMD -- nomen est omen
         output.getAxisDescriptions().forEach(AxisDescription::clear);
     }
 
+    //Todo: add an overload variant of this function
     public static double[] getMeanIntegralArray(final GridDataSet source, final int dimIndex, final double xMin, final double xMax, final double[] buffer, final boolean isMean) {
         checkMultiDimDataSetCompatibility(source);
         final double[] ret = getSanitizedBuffer(source, dimIndex, buffer);
