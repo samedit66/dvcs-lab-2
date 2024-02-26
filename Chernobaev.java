@@ -731,5 +731,16 @@ import static one.util.streamex.Internals.none;
                 acc = next;
             }
         }
+		
+		public void sumTest()
+		{
+			int a = 10;  
+			int b = 29;  
+			int c = -67;
+			// It will return the sum of a and b
+			System.out.println("The sum of a and b is = " + Integer.sum(a, b));  
+			// It will return the sum of a and b
+			System.out.println("The sum of a and b is = " + Integer.sum(b, c));
+		}
     }
 }
