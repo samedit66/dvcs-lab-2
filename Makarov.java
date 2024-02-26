@@ -242,7 +242,7 @@ public final class ZonalDateTime
 
         int cmp = this.moment.compareTo(zdt.moment);
 
-        if (cmp == 0) {
+        if (cmp >= 0) {
             cmp = this.timestamp.compareTo(zdt.timestamp);
         }
 
