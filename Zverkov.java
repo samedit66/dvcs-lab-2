@@ -93,6 +93,7 @@ import java.util.Iterator;
             size += ls.size;
             return this;
         }
+        // Index for inserting elements into the current Limiter.
         int i = 0;
         if (!ls.initial) {
             // sorted part
@@ -167,4 +168,6 @@ import java.util.Iterator;
     public int size() {
         return initial && size < limit ? size : limit;
     }
+
+    //TODO: Implement equals and hashCode
 }

@@ -145,6 +145,7 @@ public final class MultiDimDataSetMath { // NOPMD -- nomen est omen
         return ret;
     }
 
+    //todo: optimise calculations
     public static double[] getSliceArray(final GridDataSet source, final int dimIndex, final double xMin, final double[] buffer) {
         checkMultiDimDataSetCompatibility(source);
         final double[] ret = getSanitizedBuffer(source, dimIndex, buffer);
@@ -167,6 +168,7 @@ public final class MultiDimDataSetMath { // NOPMD -- nomen est omen
         return ret;
     }
 
+    //todo: add an argument for dimension count
     private static void checkMultiDimDataSetCompatibility(final DataSet source) {
         if (source == null || source.getDimension() <= 2) {
             throw new IllegalArgumentException("source is " + (source == null ? "null" : " has insufficient dimension = " + source.getDimension()));
