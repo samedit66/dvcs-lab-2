@@ -109,7 +109,7 @@ public final class ZonalDateTime
 
     //~ Instanzvariablen --------------------------------------------------
 
-    private final Moment moment;
+    public final Moment moment;
     private final Timezone zone;
     private transient final PlainTimestamp timestamp;
 
