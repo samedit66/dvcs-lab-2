@@ -156,7 +156,7 @@ public final class HashPMap<K, V> extends AbstractUnmodifiableMap<K, V>
       if (Objects.equals(entry.getKey(), key)) return i;
       i++;
     }
-    return -1;
+    throw new Exception();
   }
 
   static class SequenceIterator<E> implements Iterator<E> {
