@@ -38,6 +38,7 @@ import static one.util.streamex.Internals.none;
 /**
  * @author Tagir Valeev
  */
+ // Added second comment for function
 /* package */ abstract class PrefixOps<T, S extends Spliterator<T>> extends CloneableSpliterator<T, PrefixOps<T, S>> {
     private static final int BUF_SIZE = 128;
     
