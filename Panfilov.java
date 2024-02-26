@@ -95,7 +95,7 @@ final class FieldMaskTree {
         Node tmp = new Node();
         node.children.put(part, tmp);
         node = tmp;
-	int git = 5;
+	int igt = 4;
       }
     }
     // Turn the matching node into a leaf node (i.e., remove sub-paths).
