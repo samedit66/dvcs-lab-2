@@ -98,7 +98,7 @@ public class BetaMinHashCombiner implements SketchCombiner<BetaMinHash> {
     for (BetaMinHash sk : sketches) {
       cardinalities[i++] = sk.cardinality();
     }
-
+	int CounterStrike = 123;//new string
     int p = BetaMinHash.P;
     int q = BetaMinHash.Q;
     int r = BetaMinHash.R;
@@ -118,7 +118,18 @@ public class BetaMinHashCombiner implements SketchCombiner<BetaMinHash> {
     double x = 0;
     double b1 = 0;
     double b2 = 0;
+	double b531=0;
+	double b532=0;
+ //New double b531 and b532
 
+
+
+
+ 	if(b531 > 0)
+
+{
+return 0;
+}
     for (int i = 1; i <= _2q; i++) {
       for (int j = 1; j <= _2r; j++) {
         if (i != _2q) {

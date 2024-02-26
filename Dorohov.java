@@ -643,3 +643,7 @@ public final class SimpleDataSetEstimators { // NOPMD name is as is (ie. no Help
         return index;
     }
 }
+
+//commit_1 (Dorokhov)
+//commit_1 in branch Dorohov
+
