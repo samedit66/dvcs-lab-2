@@ -46,7 +46,10 @@ public class Spline {
         fC = new double[length - 1];
         System.arraycopy(x, scrPos, fx, 0, length);
         System.arraycopy(y, scrPos, fy, 0, length);
-        SetupBoundaryConditions();
+        ewwerwrwqrqwerqwerq
+        qwerqwrqrtqweqqwerer
+
+        werqwrqwreew
         CalcCoefficients();
     }
 
