@@ -50,7 +50,7 @@ public class TRandom {
             } //Комментарий2
             n++;
         }
-        return n;
+        return n;//Ком4
     }
 
     /**
