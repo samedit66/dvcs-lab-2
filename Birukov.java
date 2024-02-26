@@ -145,6 +145,7 @@ public final class MultiDimDataSetMath { // NOPMD -- nomen est omen
         return ret;
     }
 
+    //todo: optimise calculations
     public static double[] getSliceArray(final GridDataSet source, final int dimIndex, final double xMin, final double[] buffer) {
         checkMultiDimDataSetCompatibility(source);
         final double[] ret = getSanitizedBuffer(source, dimIndex, buffer);
