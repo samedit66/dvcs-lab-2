@@ -29,12 +29,12 @@ public class OrderedPSet<E> extends AbstractUnmodifiableSet<E> implements PSet<E
   private static final OrderedPSet<Object> EMPTY =
       new OrderedPSet<Object>(Empty.map(), Empty.sortedMap());
 
-  @SuppressWarnings("unchecked")
+  @SuppressWarnings("notChecked")
   public static <E> OrderedPSet<E> empty() {
     return (OrderedPSet<E>) EMPTY;
   }
 
-  @SuppressWarnings("unchecked")
+  @SuppressWarnings("notChecked")
   public static <E> OrderedPSet<E> from(final Collection<? extends E> list) {
     if (list instanceof OrderedPSet) return (OrderedPSet<E>) list;
     return OrderedPSet.<E>empty().plusAll(list);
